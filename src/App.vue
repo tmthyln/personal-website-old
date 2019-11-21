@@ -1,34 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <b-card bg-variant="dark" text-variant="white" title="Card Title">
-      <b-card-text>
-        With supporting text below as a natural lead-in to additional content.
-      </b-card-text>
-      <b-button href="#" variant="primary">Go somewhere</b-button>
-    </b-card>
-  </div>
+    <div id="app">
+        <b-navbar class="navbar" toggleable="lg" type="dark" variant="dark" fixed="top">
+            <b-navbar-brand to="/" style="font-variant: small-caps;">Timothy Lin</b-navbar-brand>
+    
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            
+            <b-collapse id="nav-collapse" is-nav>
+                <b-navbar-nav>
+                    <b-nav-item to="/resume">Resume</b-nav-item>
+                    <b-nav-item to="/extras">Extras</b-nav-item>
+                </b-navbar-nav>
+                
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-text><em>Some cool things I've done, plus some random stuff.</em></b-nav-text>
+                </b-navbar-nav>
+            </b-collapse>
+        </b-navbar>
+        
+        <transition>
+            <router-view></router-view>
+        </transition>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'app',
+        components: {
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app {
+        font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+    .navbar {
+        opacity: 95%;
+    }
+    h1 {
+        font-weight: bold;
+        font-variant: small-caps;
+    }
 </style>

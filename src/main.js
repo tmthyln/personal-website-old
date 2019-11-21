@@ -1,6 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+// Vue Router
+import VueRouter from 'vue-router'
+Vue.use(VueRouter);
+
+import Now from './components/Now.vue'
+import Resume from './components/Resume.vue'
+import Extras from './components/Extras.vue'
+
+// Bootstrap Vue
 import BootstrapVue from 'bootstrap-vue'
 import { CardPlugin } from 'bootstrap-vue'
 Vue.use(CardPlugin);
@@ -11,7 +20,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false;
 
+const routes = [
+  { path: '/', component: Now },
+  { path: '/resume', component: Resume },
+  { path: '/extras', component: Extras }
+];
+
+const router = new VueRouter({
+  routes
+});
+
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app');
 

@@ -7,6 +7,7 @@
 npm run build
 
 # navigate into the build output directory
+cp README.md dist/
 cd dist
 
 git init
