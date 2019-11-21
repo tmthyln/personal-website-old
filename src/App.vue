@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <b-navbar class="navbar" toggleable="lg" type="dark" variant="dark" fixed="top">
+        <b-navbar class="navigation" toggleable="lg" type="dark" variant="dark" fixed="top">
             <b-navbar-brand to="/" style="font-variant: small-caps;">Timothy Lin</b-navbar-brand>
     
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -10,11 +10,11 @@
                     <b-nav-item to="/resume">Resume</b-nav-item>
                     <b-nav-item to="/extras">Extras</b-nav-item>
                 </b-navbar-nav>
-                
-                <b-navbar-nav class="ml-auto">
-                    <b-nav-text><em>Some cool things I've done, plus some random stuff.</em></b-nav-text>
-                </b-navbar-nav>
             </b-collapse>
+    
+            <b-navbar-nav class="ml-auto">
+                <b-nav-text><em>Some cool things I've done, plus some random stuff.</em></b-nav-text>
+            </b-navbar-nav>
         </b-navbar>
         
         <transition>
@@ -40,8 +40,8 @@
         color: #2c3e50;
         margin-top: 60px;
     }
-    .navbar {
-        opacity: 95%;
+    .navigation {
+        /*opacity: 95%;*/
     }
     h1 {
         font-weight: bold;

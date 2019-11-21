@@ -11,9 +11,10 @@ import Extras from './components/Extras.vue'
 
 // Bootstrap Vue
 import BootstrapVue from 'bootstrap-vue'
-import { CardPlugin } from 'bootstrap-vue'
+import { CardPlugin, NavbarPlugin } from 'bootstrap-vue'
 Vue.use(CardPlugin);
 Vue.use(BootstrapVue);
+Vue.use(NavbarPlugin);
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -27,7 +28,8 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 });
 
 new Vue({
