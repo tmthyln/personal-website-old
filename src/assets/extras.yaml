@@ -1,0 +1,5 @@
+- bogoselectionsort:
+    title: CMSC132 BogoSelectionSort
+    desc: >
+      A student in our CMSC132 suggested a version of selection sort inspired by the bogosort and challenged someone to find the runtime complexity. As a TA, I couldn't refuse.
+    buttons:

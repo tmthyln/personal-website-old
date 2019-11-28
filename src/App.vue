@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <b-navbar class="navigation" toggleable="lg" type="dark" variant="dark" fixed="top">
-            <b-navbar-brand to="/" style="font-variant: small-caps;">Timothy Lin</b-navbar-brand>
+            <b-navbar-brand to="/" id="brand-title">Timothy Lin</b-navbar-brand>
     
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             
@@ -42,6 +42,10 @@
     }
     .navigation {
         /*opacity: 95%;*/
+    }
+    #brand-title {
+        font-variant: small-caps;
+        font-size: x-large;
     }
     h1 {
         font-weight: bold;

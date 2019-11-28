@@ -6,8 +6,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 import Now from './components/Now.vue'
-import Resume from './components/Resume.vue'
-import Extras from './components/Extras.vue'
+import Resume from './components/resume/Resume.vue'
+import Extras from './components/extras/Extras.vue'
 
 // Bootstrap Vue
 import BootstrapVue from 'bootstrap-vue'
@@ -24,7 +24,8 @@ Vue.config.productionTip = false;
 const routes = [
   { path: '/', component: Now },
   { path: '/resume', component: Resume },
-  { path: '/extras', component: Extras }
+  { path: '/extras', component: Extras },
+  { path: '*'}
 ];
 
 const router = new VueRouter({
