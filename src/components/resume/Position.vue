@@ -16,8 +16,10 @@
         props: {
             title: String,
             start: String,
-            end: String,
-            
+            end: {
+                type: String,
+                default: "present"
+            }
         }
     }
 </script>

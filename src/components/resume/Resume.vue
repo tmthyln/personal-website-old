@@ -1,5 +1,8 @@
 <template>
     <div id="resume">
+    
+        <h2 class="section-heading">Education</h2>
+        <p>University of Maryland, College Park</p>
         
         <h2 class="section-heading">Experience</h2>
         
@@ -77,9 +80,6 @@
             <li>Received Excellence in Engineering Award (15 recipients from pool of 65) in recognition of accomplishments
                 that directly impacted the team's performance</li>
         </position>
-        
-        <h2 class="section-heading">Education</h2>
-        <p>University of Maryland, College Park</p>
     
         <h2 class="section-heading">Additional Links</h2>
         <div id="links">
@@ -112,7 +112,7 @@
     }
     .section-heading {
         font-variant: small-caps;
-        font-size: xxx-large;
+        font-size: xx-large;
     }
     .org-header {
         text-align: left;

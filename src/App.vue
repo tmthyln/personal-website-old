@@ -5,14 +5,15 @@
     
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             
-            <b-collapse id="nav-collapse" is-nav>
+            <b-collapse id="nav-collapse" v-model="show" is-nav>
                 <b-navbar-nav>
                     <b-nav-item to="/resume">Resume</b-nav-item>
                     <b-nav-item to="/extras">Extras</b-nav-item>
+                    <b-nav-item to="/visualizations">Visualizations</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
     
-            <b-navbar-nav class="ml-auto">
+            <b-navbar-nav v-if="!show" class="ml-auto">
                 <b-nav-text><em>Some cool things I've done, plus some random stuff.</em></b-nav-text>
             </b-navbar-nav>
         </b-navbar>
@@ -27,6 +28,11 @@
     export default {
         name: 'app',
         components: {
+        },
+        data: function () {
+            return {
+                show: true
+            }
         }
     }
 </script>
@@ -42,6 +48,9 @@
     }
     .navigation {
         /*opacity: 95%;*/
+    }
+    #nav-collapse {
+        alignment: left;
     }
     #brand-title {
         font-variant: small-caps;
