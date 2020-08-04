@@ -17,3 +17,5 @@ git commit -m 'deploy'
 git push -f git@github.com:tmthyln/tmthyln.github.io.git master
 
 cd -
+
+pause
