@@ -1,5 +1,4 @@
 ## Web
-
 .DS_Store
 node_modules
 /dist
@@ -12,6 +11,10 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Nuxt
+.nuxt
+/dist-nuxt
 
 # Editor directories and files
 .idea
@@ -64,7 +67,3 @@ rsconnect/
 
 # Temp downloading files
 *.crdownload
-
-
-## Intellij
-.idea/
