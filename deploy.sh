@@ -7,7 +7,7 @@
 npm run build
 
 # navigate into the build output directory
-cp README.md dist/
+cp -f README.md dist/
 cd dist
 
 git init
@@ -18,4 +18,4 @@ git push -f git@github.com:tmthyln/tmthyln.github.io.git master
 
 cd -
 
-pause
+read -p
