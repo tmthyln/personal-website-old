@@ -1,0 +1,610 @@
+---
+title: "A Human Analysis of the FIRST Robotics Competition"
+author: "Timothy Lin"
+output:
+    html_document:
+        toc: true
+        toc_depth: 4
+        toc_float: true
+        collapsed: false
+        code_folding: hide
+        df_print: paged
+        theme: spacelab
+        highlight: kate
+        css: styles.css
+        fig.caption: true
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(ggplot2)
+library(leaflet)
+library(stringr)
+library(jsonlite)
+library(cowplot)
+library(broom)
+```
+
+FIRST is not just a comment left in the comment section of YouTube videos. It's a nonprofit organization *For the Inspiration and Recognition of Science and Technology* that exposes elementary through high school students to real-life engineering and professional skills through contact with industry mentors, a fun and challenging competition mirroring real-world engineering, and a worldwide community of students, engineers, and non-engineering mentors.
+
+The FIRST Robotics Competition (FRC) specifically is a competition for high school students to build a robot that can compete with others' in a 3v3 game that changes annually. It's not just engineering students that participate though: there are budding engineers and programmers, sure, but teams also need marketing, communications, outreach, business, and others.
+
+That's very big picture though, but most people don't truly understand the impact and appeal of this robotics competitions without seeing it first hand. Seeing as it's the offseason, the next best thing might be videos of the final matches at the highest level of play: World Championships.
+
+```{r echo=FALSE}
+knitr::asis_output(htmltools::htmlPreserve("
+<iframe width=\"731\" height=\"416\" src=\"https://www.youtube.com/embed/IQTwmX5lpn0\" frameborder=\"0\" allow=\"accelerometer; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+"))
+```
+```{r echo=FALSE}
+knitr::asis_output(htmltools::htmlPreserve("
+<iframe width=\"731\" height=\"416\" src=\"https://www.youtube.com/embed/kfPs4PbNG10\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>
+"))
+```
+
+Those were from the last 2 years. If you're interested, check out the FIRST website or games from previous years (Aerial Assist was particularly fun to watch, especially compared to these).
+
+While FIRST has had a huge impact on so many people, it has had much less of an impact on others, and these situations are not as publicized (for obvious reasons). I've personally, as a student, mentor, and volunteer, been exposed to struggling teams, volunteers who never want to volunteer again after having a horrible experience, and students who were turned off from certain directions also from bad experiences. The human question then becomes
+
+> What factors lead to teams or individuals having bad experiences or low satisfaction?
+
+This project was built in R using these packages:
+```
+library(tidyverse)
+library(leaflet)
+library(stringr)
+library(jsonlite)
+library(cowplot)
+library(broom)
+```
+
+## The Data: FRC-TBA
+
+The scoring system for FRC has always been recorded and in recent years become automated to a high level of detail. FIRST provides this data on teams and events through their API, but the community also augments this data with even more data. The main organization that does this is called The Blue Alliance (TBA). (This name comes from the fact that in the games, it's the red alliance versus the blue alliance.)
+
+### Data Acquisition
+
+Although TBA provides an [API](https://www.thebluealliance.com/apidocs) which allows you to query individually, they also provide a full copy of their data in a [Google Big Query dataset](https://bigquery.cloud.google.com/dataset/tbatv-prod-hrd:the_blue_alliance). This is nice because we can use SQL to pre-filter the data down to a reasonable size (excluding unused and unnecessary columns) and then use R to do more advanced processing.
+
+*Note: The particular SQL dialect used here is a legacy SQL that works with Google's BigQuery, except the one for the match data table, which is standard SQL.* For more details on the legacy SQL dialect, see [Google's docs](https://cloud.google.com/bigquery/docs/reference/legacy-sql) and for the standard SQL dialect, also see [their docs](https://cloud.google.com/bigquery/docs/reference/standard-sql/).
+
+### Tables in the Dataset {.tabset}
+There are a lot of different tables in this dataset, so the preprocessing for each table has been split into several tabs. Peruse as needed. Some of the tables are loaded in the same way, but some are not. For concise but still detailed look into the data preprocessing employed in this project, try the following sequence of data tables:
+
+* [Teams](#teams)
+* [Awards](#awards)
+* [Match Data](#matches)
+
+#### Teams {#teams}
+There's a lot of extraneous attributes in this data table:
+
+All of these attributes are the same for all entries (so they don't give us any useful information):
+
+* `__key___app`: always "s~tbatv-prod-hrd"
+* `__key___id`: always NA
+* `__has_error__`: always FALSE
+* `__error__`: always NA
+* `__key___kind`: always "Team"
+* `__key___namespace`: always NA
+
+Some attributes are redundant:
+
+* most teams' full names include their sponsors for the most recent year; their nicknames are better
+* there are `normalized_location_\*` attributes and "standard" location attributes; we only need the former (we'll also rename them to shorter, more meaningful names)
+
+Finally, some attributes, we just won't care about for our analysis:
+
+* `updated`
+* `created`
+* `school_name`
+* `first_tpid`
+* `home_cmp`
+
+So instead of *removing* these attributes, we'll just *select* the other ones:
+```{sql teams_query, eval=FALSE}
+SELECT
+  nickname AS team_name,
+  team_number,
+  motto AS team_motto,
+  rookie_year,
+  first_tpid_year AS first_year,
+  normalized_location.street_number AS street_number,
+  normalized_location.street AS street,
+  normalized_location.city AS city,
+  normalized_location.state_prov AS state_province,
+  normalized_location.country AS country,
+  normalized_location.postal_code AS zip,
+  normalized_location.formatted_address AS full_address,
+  normalized_location.lat_lng.lat AS lat,
+  normalized_location.lat_lng.long AS lng,
+  website
+FROM
+  [tbatv-prod-hrd:the_blue_alliance.team]
+```
+
+```{r teams, message=FALSE}
+teams <- read_csv("data/team.csv", guess_max = 6931)
+
+teams %>%
+    # shuffle
+    sample_frac(1.0)
+```
+
+So it looks like there's about 6931 teams on the record, and about
+```{r}
+message(paste("Teams with Location: ", 
+          teams %>%
+              filter(!is.na(lat), !is.na(lng)) %>%
+              summarize(TeamsWithLocation = n_distinct(team_name))
+    ))
+```
+teams with location (latitude and longitude) data, which is only about 75% of the teams, but should still give us a pretty representative location sample. We'll now sample 1500 teams and see where teams are generally spread around the world:
+
+```{r teammap, message=FALSE}
+loc_df <- teams %>%
+    filter(!is.na(lat), !is.na(lng)) %>%
+    sample_n(1500)
+
+loc_df %>%
+    leaflet() %>%
+    addTiles() %>%
+    setView(lat=5, lng=0, zoom=2) %>%
+    addAwesomeMarkers(popup=loc_df$team_name)
+```
+
+As we can see from the map, the vast majority of the teams come from the US, but there are strong contingents in the middle east, (mostly east) Asia, and Australia, with a few teams in South America. That might make our data hard to analyze: there are a lot of high costs for international teams, since they may need to fly more to find competitions, so the teams that start up are usually very good ones.
+
+It's worth noting that before I had said 75% is not a representative sample, but then I chose to randomly sample only 1500 of the 5000+ teams with data. The difference is that the former is *systematically excluded* as missing data, whereas the latter is random and so the distribution stays approximately the same. If we look compare the distributions of the teams across start years, with and without location data,
+
+```{r team_start_year_dist}
+teams %>%
+    mutate(hasLoc = factor(ifelse(!is.na(lat) & !is.na(lng), "Has Location", "No Location"))) %>%
+    mutate(year = ifelse(is.na(rookie_year), first_year, rookie_year)) %>%
+    ggplot(aes(x = hasLoc, y = year)) +
+    geom_violin() +
+    coord_flip() +
+    labs(title = "Distributions of Teams over Start Years",
+         y = "Year Team Started",
+         x = "")
+```
+
+It's immediately obvious that the distributions are very different. The teams without location data are the newer teams (perhaps data hasn't been inputted yet) and the ones with data are all the older teams.
+
+***
+
+#### Awards {#awards}
+Again, we need to prune away/clean up the fields. In addition, we have an attribute that tell us whether the award was given to an individual (oftentimes a volunteer) or an entire team. This SQL query will do that for us:
+```{sql awards_query, eval=FALSE}
+SELECT
+  name_str AS award_name,
+  year,
+  event.name as event_name,
+  SUBSTRING(team_list.name, 4, 9) AS team_number,
+  (team_list.kind IS NOT NULL) AS team_award,  # checks if 
+  award_type_enum AS award_type,
+  event_type_enum AS event_type
+FROM
+  [tbatv-prod-hrd:the_blue_alliance.award]
+```
+
+After doing that, our data looks much better:
+```{r raw_awards, message=FALSE}
+raw_awards <- read_csv("data/award.csv")
+
+raw_awards %>%
+    sample_frac(1.0)
+```
+
+But there's still a couple issues (which we'll resolve using R):
+
+1. The `award_type` and `event_type` columns are categorical, but what are the categories?
+2. There seems to be 2 different types of awards contained in this one table (individual and team). It will make it a little easier to just split them up.
+
+It turns out, there's a [data dictionary](https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/award_type.py#L6) for the `award_type` attribute (as a python utility module) and a [similar one](https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2) for the `event_type` attribute. There's a lot of different awards (which we don't necessarily care about), so we'll broadly group them into 3 categories:
+
+* Blue Banner Awards: CHAIRMANS (0), CHAIRMANS_FINALIST (69), WINNER (1), WOODIE_FLOWERS (3)
+* Non-Judged Awards: HIGHEST_ROOKIE_SEED (14), DEANS_LIST (4), VOLUNTEER (5), WILDCARD (68)
+* Judged Awards: all others
+
+There aren't as many events, but we want to group them by level:
+
+* Local Events:  REGIONAL (0), DISTRICT (1), DISTRICT_CMP (2), DISTRICT_CMP_DIVISION (5)
+* World Championship Event: CMP_DIVISION (3), CMP_FINALS (4)
+* Offseason Events (the rest of them): FOC (6), OFFSEASON (99), PRESEASON (100), UNLABLED (-1)
+
+After processing `award_type` and `event_type`:
+```{r awards}
+awards <- raw_awards %>%
+    # process award types
+    mutate(award_type = factor(ifelse(award_type %in% c(0, 69, 1, 3), 
+                               "Blue Banner", 
+                               ifelse(award_type %in% c(14, 4, 5, 68), 
+                                      "Non-Judged",
+                                      "Judged")))) %>%
+    
+    # process event types
+    mutate(event_type = factor(ifelse(event_type %in% c(0, 1, 2, 5),
+                                   "Local",
+                                   ifelse(event_type %in% c(3, 4),
+                                          "Worlds",
+                                          "Offseason")))) %>%
+    distinct()
+
+awards %>%
+    sample_frac(1.0)
+```
+
+And we should split this into an individual award table and a team award table:
+```{r awards_split}
+individual_awards <- awards %>%
+    filter(!team_award) %>%
+    select(-team_award, -team_number)
+
+individual_awards
+
+team_awards <- awards %>%
+    filter(team_award) %>%
+    select(-team_award)
+
+team_awards
+```
+
+
+So how many awards are given out to teams each year? One possible measure of team "success" is how many awards they get and at what level (obviously, a team has to make it to higher levels of competition in order to even get an award).
+
+```{r team_awards_plot}
+team_awards %>%
+    mutate(year = factor(year)) %>%
+    group_by(year, team_number) %>%
+    summarize(num_awards = n()) %>%
+    ggplot(aes(x = year, y = num_awards)) +
+    geom_boxplot() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
+    labs(title = "Num of Awards Received by Each Team over the Years",
+         x = "Year",
+         y = "Number of Team Awards Received")
+```
+
+What's a little bit alarming here is that while the maximum number of awards per team is increasing, the average number of awards received by teams (only among those teams that even get awards) is not increasing noticeably, as measured by the median (except one step up from 2013 to 2014).
+
+So preliminarily, based on this visual representation, understanding which teams get awards and why doesn't seem trivial...will need more analysis.
+
+***
+
+#### Districts and District Teams
+There's a quirk about the competition bracket for this robotics competition, which varies by region: some states are in a "district" model and others are in a "regional" model.
+
+For those in the regional model: there are a bunch of medium-sized competitions spread out across the world. Each team can choose any number of these competitions to go to. Winning one gets them a ticket to the World Championships (but they have to win the competition; other awards or rankings don't matter).
+
+In recent years, some areas have adopted the district model: all teams in a certain region (usually ~200 teams) compete at least twice in small competitions hosted in high school gyms. In these smaller-scale ones, each team accumulates points through their ranking, playoff performance, winning, awards, and team age (rookie teams are given a small boost). The top-ranked teams move on to a large District Championship, where the top-ranked teams from there move on to the World Championships.
+
+A good question for analysis might be whether the introduction of the district system improved the competition. Alas, we won't do that analysis here.
+
+***
+
+#### Event Details and Teams
+
+There is actually no information in the event details table that we care about. But we do care about the event teams.
+
+The SQL query for this one is pretty simple:
+```{sql event_teams_query, eval=FALSE}
+SELECT
+  year,
+  SUBSTRING(team.name, 4, 9) as team_number,
+  event.name as event_name
+FROM
+  [tbatv-prod-hrd:the_blue_alliance.eventTeam] 
+```
+
+After cleaning, this data gives us a relationship between a team (and the year) and the events they attended that year. This actually gives another important datapoint: how many active teams were there in each year. This is very important, as this allows us to scale our data per year based on how many teams actually participated. (Some teams leave the competition, either temporarily or permanently (and this isn't always recorded).)
+
+```{r event_teams, message=FALSE}
+event_teams <- read_csv("data/eventTeam.csv")
+
+event_teams %>%
+    sample_frac(1.0)
+```
+
+For example, now we can see how many active teams there were year to year (how much the human base is growing) and how many events there were (how much the organization is growing):
+```{r, fig.height=10, message=FALSE}
+team_event_numbers <- event_teams %>%
+    group_by(year) %>%
+    summarize(numTeams = n_distinct(team_number),
+              numEvents = n_distinct(event_name))
+
+plot_grid(
+    #  teams plot
+    team_event_numbers %>%
+        ggplot(aes(x = factor(year), y = numTeams)) +
+        geom_line() +
+        geom_point() +
+        labs(title = "Number of Teams per Year",
+             x = "Year",
+             y = "Number of Teams") +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 1),
+              aspect.ratio = 1),
+    # events plot
+    team_event_numbers %>%
+        ggplot(aes(x = factor(year), y = numEvents)) +
+        geom_line() +
+        geom_point() +
+        labs(title = "Number of Events per Year",
+             x = "Year",
+             y = "Number of Events") +
+        theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 1),
+              aspect.ratio = 1),
+ncol = 1, align = 'v')
+```
+
+Since the number of teams participating each year increases dramatically, we'll need to scale some of our metrics by the number of teams.
+
+***
+
+#### Match Data {#matches}
+
+There's a lot to do with the match data. Here's the SQL query that was used:
+```{sql match_query, eval=FALSE}
+WITH alliances AS (
+    SELECT * FROM `frc_tba_test.match` AS A
+    INNER JOIN (
+      SELECT __key___name, 'Blue' AS alliance, JSON_EXTRACT(alliances_json, "$.blue") AS teams_json FROM `frc_tba_test.match`
+      UNION ALL
+      SELECT __key___name, 'Red' AS alliance, JSON_EXTRACT(alliances_json, "$.red") AS teams_json FROM `frc_tba_test.match`) AS B
+    ON A.__key___name = B.__key___name
+) SELECT DISTINCT
+  year,
+  event_name,
+  comp_level,
+  set_number,
+  match_number,
+  alliance,
+  JSON_EXTRACT(teams_json, "$.score") AS score,
+  JSON_EXTRACT(teams_json, "$.teams") AS teams
+FROM alliances
+```
+
+The second part of the query (starting about halfway down at the last `SELECT` statement) is the standard preprocessing we've done so far: selecting only the useful attributes and doing a little bit of extraction. We extract the team number from the end of the `team_key_names` string and the score from the `teams_json` attribute (ultimately from the `alliances_json`, more on this next).
+
+The top part is different: we need to make our data "tidy" (as defined [here](https://r4ds.had.co.nz/tidy-data.html)) from our JSON that describes the alliances (opposing teams) and their scores. We start with a raw JSON string like:
+```
+alliances_json
+=================================================================
+{"blue": {"score": 10, "teams": ["frc80", "frc368", "frc399"]}, "red": {"score": 51, "teams": ["frc64", "frc60", "frc330"]}}
+```
+
+Our first step (accomplished by the `SELECT`, `UNION ALL`, `SELECT` statements) is to separate the red data and the blue data. This splits each row into
+```
+alliances_json
+=================================================================
+ {"blue": {"score": 10, "teams": ["frc80", "frc368", "frc399"]}}
+-----------------------------------------------------------------
+ {"red": {"score": 51, "teams": ["frc64", "frc60", "frc330"]}}
+```
+
+But now we have some rows being red and others being blue. We want to "split" the data: we want to make a separate column that indicated which color alliance and then put the scores and team names in their own columns. We can do this by the entire `INNER JOIN`...`ON` section. That takes the alliance colors and puts them into the `alliance` attribute; for each, it extracts the remaining JSON section. We first separate out the color from the rest:
+```
+alliance    remaining_json
+=================================================================
+blue        {"score": 10, "teams": ["frc80", "frc368", "frc399"]}
+-----------------------------------------------------------------
+red         {"score": 51, "teams": ["frc64", "frc60", "frc330"]}
+```
+
+And now, we extract the score and the teams:
+```
+alliance    score     teams
+====================================================
+blue        10        ["frc80", "frc368", "frc399"]
+----------------------------------------------------
+red         51        ["frc64", "frc60", "frc330"]
+```
+
+With the actual data, we got this data table:
+```{r raw_matches, message=FALSE}
+raw_matches <- read_csv("data/match.csv", guess_max = 4444) %>%
+    mutate(score = as.numeric(gsub('"', '', score)))
+
+raw_matches %>%
+    sample_frac(1.0)
+```
+
+That was all accomplished with SQL, but we still need to make a different row for every team. This will be our approach for processing the `teams` attribute:
+
+1. Strip away all of the `[`, `"`, `]`, and `frc` characters so we just have the numbers separated by commas.
+2. We will split by commas and put each into their own column.
+3. Then we can put them in their own row.
+
+```{r matches, message=FALSE}
+matches <- raw_matches %>%
+    # step 1: make into a comma separated list
+    mutate(teams = gsub('[^0-9,]', '', teams)) %>%
+    
+    # step 2: separate into multiple columns
+    separate(teams, c("first", "second", "third"), sep = ",") %>%
+    
+    # step 3: separate into multiple rows
+    gather("position", "team_number", first, second, third) %>%
+    filter(!is.na(team_number))
+
+matches %>%
+    sample_frac(1.0)
+```
+
+***
+
+#### Event Data {#eventdata}
+And finally, the big one: event data. There's a lot of data here, but we won't use it for our analysis (at least not yet, this is an evolving document).
+
+***
+
+## Tests of Persistence
+Let's try to understand what factors affect how long teams stay on in FRC. As a (mostly) start-year independent metric, we're going to define "persistence" as the following
+
+$$
+\text{persistence} = \dfrac{\text{number of years since they last played}}{\text{number of years since their first year}} \hspace{0.5in}\text{(relative to 2020)}
+$$
+
+So, a high persistence value (close to 1) reflects a team staying on for most of the years where they could. In constrast, a low persistence value (close to 0) reflects a team that only participated for a few years out of all possible years they could have.
+
+So let's see what typical values for persistence are.
+
+```{r persistence}
+persistence_df <- event_teams %>%
+    select(year, team_number) %>%
+    distinct() %>%
+    group_by(team_number) %>%
+    summarize(last_year = max(year)) %>%
+    ungroup() %>%
+    inner_join(teams %>%
+             select(team_number, first_year = rookie_year) %>%
+             drop_na(),
+             by = "team_number") %>%
+    mutate(persistence = (2020 - last_year)/(2020 - first_year)) %>%
+    select(team_number, persistence) %>%
+    filter(persistence <= 1.0 & persistence >= 0.0)
+
+persistence_df %>%
+    sample_frac(1)
+```
+
+What kind of distribution do we have?
+
+```{r persistence_distribution}
+persistence_df %>%
+    ggplot(aes(x = persistence)) +
+    geom_histogram(binwidth = 0.05)
+```
+
+Huh. That's interesting. It looks like most teams have participated 25% of the years or less. There's a "core" group of teams that participate nearly every year (although, to be sure, this also includes everyone who's a first year team).
+
+### Possible Predictor: Number of Team Awards
+For a competition of about 40 teams, there are about 10-15 awards given out to teams (with teams rarely getting two awards). Is whether a team has been recognized via a judged award correlated with the persistence of the team?
+
+```{r}
+years_played <- event_teams %>%
+    select(-event_name) %>%
+    group_by(team_number) %>%
+    summarize(years = n_distinct(year))
+
+avg_awards_df <- team_awards %>%
+    group_by(team_number) %>%
+    summarize(num_awards = n()) %>%
+    ungroup() %>%
+    inner_join(persistence_df, by = "team_number") %>%
+    inner_join(years_played, by = "team_number") %>%
+    mutate(avg_awards = num_awards / years) %>%
+    select(-num_awards, -years)
+
+avg_awards_df %>%
+    sample_frac(1)
+```
+
+First, let's examine the distribution of average awards received.
+```{r}
+avg_awards_df %>%
+    ggplot(aes(x = avg_awards)) +
+    geom_histogram()
+```
+
+The vast majority of teams get 2 awards or less per year they've played. Most get 1 or less per year.
+
+Now, looking at the raw relationship between the persistence and average number of awards received per year via a scatter plot:
+
+```{r}
+avg_awards_df %>%
+    ggplot(aes(x = avg_awards, y = persistence)) +
+    geom_point() +
+    geom_smooth(method = lm)
+```
+
+Looking at this scatter plot, there does not appear to be any statistically significant relationship between getting awards and staying in the program. In fact, the relationship we have is roughly $y=c$ (where $c$ is a constant) with high likelihood. We can confirm this with a inferred linear model.
+
+```{r}
+pers_awards_fit <- lm(persistence~avg_awards, data=avg_awards_df)
+
+tidy(pers_awards_fit)
+```
+
+For both the y-intercept and the slope term, we have p-values much lower than 0.05, suggesting that these match our data with high statistical confidence. Particularly, we care that the `avg_awards` term is close to 0, indicating that there is no relationship. We can also graphically see this: if you look at $y=0.5$, there is a line of points representing teams that have all gone to exactly half of their possible years. For those points, they all receive vastly different numbers of awards, but clearly have the same persistence.
+
+### Possible Predictor: Average Match Score
+Does success on the competition field translate to long-term involvement?
+
+To calculate an average match score using match data from multiple years, we'll need to standardize them by year, as the scoring system changes every year.
+```{r}
+avg_score_df <- matches %>%
+    select(team_number, score, year) %>%
+    group_by(year) %>%
+    mutate(year_avg = mean(score), year_sd = sd(score)) %>%
+    ungroup() %>%
+    group_by(team_number) %>%
+    mutate(z_score = (score - year_avg) / year_sd) %>%
+    summarize(avg_score = mean(z_score)) %>%
+    ungroup() %>%
+    drop_na() 
+
+avg_score_df %>%
+    sample_frac(1)
+```
+
+Again, let's first take a look at the distribution:
+```{r}
+avg_score_df %>%
+    ggplot(aes(x = avg_score)) +
+    geom_histogram()
+```
+
+In this case, the average score is very closely normally distributed. This is expected, as we are averaging over many years of data across many matches every year. Now, is there any correlation for specific teams with persistence?
+
+```{r}
+avg_score_df %>%
+    mutate(team_number = as.numeric(team_number)) %>%
+    inner_join(persistence_df, by = "team_number") %>%
+    ggplot(aes(x = avg_score, y = persistence)) +
+    geom_point() +
+    geom_smooth(method=lm)
+```
+
+Again, it seems that there isn't a direct correlation between persistence and average match score that could be used as a predictor. Checking with our p-value,
+
+```{r}
+pers_scores_fit <- lm(persistence~avg_score, data=avg_score_df %>% 
+                          mutate(team_number = as.numeric(team_number)) %>%
+                          inner_join(persistence_df, by = "team_number"))
+
+tidy(pers_scores_fit)
+```
+
+Our p-value for the `avg_score` predictor is very low with a low estimated value (of -0.1). This suggests that there is a statistically significant relationship of very little change in persistence for change in average match score. Competitive success (at least in raw match score) is not indicative of long-term involvement in the program.
+
+## Some Overall Insights
+It turns out, it's pretty hard to figure out why some teams leave and other stay with any sort of statistical certainty. Looking at the predictors of awards and match score, we weren't able to find good predictors (instead, we mostly proved that they would be bad predictors, at least on their own).
+
+Further analysis:
+
+* We restricted our analysis to *averages* over a long time period, but especially since our output variable is a measure across time, we should incorporate more temporal features.
+  * Simple ones such as difference in some quantity from their first year to their last, average improvement per year, etc.
+  * More feature-heavy ones such as adding all of the values per year for some quantity to the analysis.
+* There are other "winning statistics" that measure a team's ability to play the game, play defense, offense, etc. that could be incorporated.
+* We did not take into account any externalities. For example, budget constraints, location constraints, size of the team, and geographic location.
+* *More Meaningful with Machine Learning?* Could we do a similar analysis, but with more black-box machine learning models? (At the very least, can we predict how long a team will stay with high accuracy, even if our results aren't particularly interpretable?)
+
+## Other Analyses
+Since a *robotics competition* naturally attracts people of a certain...inclination, there are already a lot of different analyses done on this data, but most of them are technical: coming up with the best metrics to evaluate other teams (and their own teams!), figuring out which team's the best team never to have made it to the World Championships (by bad luck), etc. This approach is the start of some more human-centric analysis: rigorous, but focused on the personal and professional side.
+
+Nevertheless, here are some analyses other people have done on this data:
+
+* ["Offensive Power Rating" winning statistic](https://blog.thebluealliance.com/2017/10/05/the-math-behind-opr-an-introduction/) based on a Least Squares Approximation
+* [More Technical Description of OPR](https://imjac.in/ta/post/2017/10/08/oprs-and-least-squares-linear-algebra.html)
+* If interested, the related statistics of DPR and [CCWM](https://www.chiefdelphi.com/t/paper-new-scouting-database-from-team-2834/91560/11). (WIth [even further discussion](https://www.chiefdelphi.com/t/incorporating-opposing-alliance-information-in-ccwm-calculations/144460) if desired.)
+* The whitepapers for the analysis discussed [here](https://www.chiefdelphi.com/t/paper-2018-raw-score-data-and-analysis/164344/10) are actually not currently available (website was overhauled recently and the paper links haven't been updated yet). However, there is a lot of discussion on the more technical **"winning statistics"**.
+
+
+***
+
+Powered by [The Blue Alliance](https://www.thebluealliance.com/).
+
+*Created as a final project for UMD's CMSC320: Data Science course, spring 2019 with Hector Corrada Bravo.*
