@@ -2,132 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Manifest.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/hamburger.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/rndimg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/scripts/generate_results.jl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/scripts/output/script1.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/scripts/output/script2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/scripts/script1.jl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/scripts/script2.jl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_css/franklin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_css/poole_hyde.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/foot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/foot_highlight.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/foot_katex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/head_highlight.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/head_katex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/page_foot.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/style.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/tag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/highlight/github.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/highlight/highlight.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/auto-render.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/katex.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/katex/katex.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.jl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/prism.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/extras.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/prism.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ExtraItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavigationMenu.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Position.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/191120-bogosorting.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/200620-shampoo.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/extras.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/_blogpost.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/resume.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/frc/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/frc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/frc/projf.Rmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/frc/projf.Rproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/frc/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pdfs/bogoselectionsort.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pdfs/chased_by_the_cops.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/pdfs/resume.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/umdloop_logo.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/linkedin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/personal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_css/timothylin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/191120-bogosorting.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/200620-shampoo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/style.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/style.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -176,16 +64,20 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\tmthy\Documents\pers\portfolio\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vuejs.nuxt.types-notification-shown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_css" />
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio" />
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\posts" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\src" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages\posts" />
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages" />
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\assets\css" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -293,7 +185,8 @@
       <workItem from="1596301871925" duration="854000" />
       <workItem from="1596381417043" duration="5006000" />
       <workItem from="1596479171505" duration="53369000" />
-      <workItem from="1598119641453" duration="2877000" />
+      <workItem from="1598119641453" duration="3942000" />
+      <workItem from="1598124203514" duration="4902000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
@@ -312,6 +205,9 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/dist" />
+    </ignored-roots>
     <MESSAGE value="make workspace clean" />
     <option name="LAST_COMMIT_MESSAGE" value="make workspace clean" />
   </component>
@@ -353,10 +249,10 @@
     </state>
     <state width="1206" height="306" key="GridCell.Tab.0.right/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596584092016" />
     <state width="685" height="264" key="GridCell.Tab.0.right/0.0.2194.1234@0.0.2194.1234" timestamp="1596435374414" />
-    <state x="251" y="285" key="SettingsEditor" timestamp="1596522060469">
+    <state x="251" y="285" key="SettingsEditor" timestamp="1598124235202">
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
-    <state x="251" y="285" key="SettingsEditor/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596522060469" />
+    <state x="251" y="285" key="SettingsEditor/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1598124235202" />
     <state x="251" y="285" key="SettingsEditor/0.0.2194.1234@0.0.2194.1234" timestamp="1596299901653" />
     <state x="85" y="157" width="1042" height="937" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1596512920865">
       <screen x="0" y="0" width="2194" height="1234" />

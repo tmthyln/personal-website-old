@@ -1,0 +1,8 @@
+.social-media-icon {
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+}
