@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_assets/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/linkedin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_assets/personal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_css/timothylin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/191120-bogosorting.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/200620-shampoo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_assets/umd.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_layout/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layout/style.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/style.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu1.md" beforeDir="false" afterPath="$PROJECT_DIR$/resume.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu2.md" beforeDir="false" afterPath="$PROJECT_DIR$/extras.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/191120-bogosorting.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/191120-bogosorting.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/200620-shampoo.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/200620-shampoo.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +181,8 @@
       <workItem from="1596381417043" duration="5006000" />
       <workItem from="1596479171505" duration="53369000" />
       <workItem from="1598119641453" duration="3942000" />
-      <workItem from="1598124203514" duration="4902000" />
+      <workItem from="1598124203514" duration="7291000" />
+      <workItem from="1598131917429" duration="17474000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
@@ -195,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596433263251</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="convert to franklin">
+      <created>1598129360394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598129360395</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -209,7 +212,8 @@
       <path value="$PROJECT_DIR$/dist" />
     </ignored-roots>
     <MESSAGE value="make workspace clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="make workspace clean" />
+    <MESSAGE value="convert to franklin" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert to franklin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="471" y="504" key="#ESLint" timestamp="1596501717956">
@@ -225,9 +229,10 @@
     </state>
     <state x="1103" y="392" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596491766383" />
     <state x="1103" y="392" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2194.1234@0.0.2194.1234" timestamp="1596431955034" />
-    <state x="997" y="127" key="CommitChangelistDialog2" timestamp="1596433261383">
+    <state x="997" y="127" key="CommitChangelistDialog2" timestamp="1598129359309">
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
+    <state x="997" y="127" key="CommitChangelistDialog2/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1598129359309" />
     <state x="997" y="127" key="CommitChangelistDialog2/0.0.2194.1234@0.0.2194.1234" timestamp="1596433261383" />
     <state width="1206" height="306" key="GridCell.Tab.0.bottom" timestamp="1596584092017">
       <screen x="0" y="0" width="2194" height="1234" />
@@ -262,19 +267,23 @@
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
     <state x="85" y="157" width="1042" height="937" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596512920865" />
+    <state x="388" y="541" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598129310456">
+      <screen x="0" y="0" width="2194" height="1234" />
+    </state>
+    <state x="388" y="541" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1598129310456" />
     <state x="809" y="0" width="927" height="777" key="dock-window-1" timestamp="1596516088532">
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
     <state x="809" y="0" width="927" height="777" key="dock-window-1/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596516088532" />
-    <state x="1029" y="305" width="672" height="677" key="run.anything.popup" timestamp="1596578489080">
+    <state x="1029" y="305" width="672" height="677" key="run.anything.popup" timestamp="1598142237902">
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
-    <state x="1029" y="305" width="672" height="677" key="run.anything.popup/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596578489080" />
+    <state x="1029" y="305" width="672" height="677" key="run.anything.popup/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1598142237902" />
     <state x="1029" y="305" width="672" height="677" key="run.anything.popup/0.0.2194.1234@0.0.2194.1234" timestamp="1596432108081" />
-    <state x="389" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1596490301346">
+    <state x="389" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1598145454257">
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
-    <state x="389" y="310" width="672" height="678" key="search.everywhere.popup/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1596490301346" />
+    <state x="389" y="310" width="672" height="678" key="search.everywhere.popup/0.0.2194.1234/3840.0.1920.1080@0.0.2194.1234" timestamp="1598145454257" />
     <state x="666" y="447" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1596479229570">
       <screen x="0" y="0" width="2194" height="1234" />
     </state>
