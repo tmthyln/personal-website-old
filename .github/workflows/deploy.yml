@@ -40,8 +40,8 @@ jobs:
             using Franklin;
             Pkg.activate("."); Pkg.instantiate();
             optimize()'
-    - name: Copy README for Repository
-      run: cp ./README.md ./__site/
+    - name: Public Files
+      run: cp ./public/* ./__site/
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

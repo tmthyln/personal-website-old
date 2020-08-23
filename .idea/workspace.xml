@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.md" beforeDir="false" afterPath="$PROJECT_DIR$/config.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -57,16 +60,17 @@
     <property name="vuejs.nuxt.types-notification-shown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_css" />
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tmthy\Documents\pers\portfolio" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\posts" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\src" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages\posts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio\public" />
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_css" />
+      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_assets" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -176,7 +180,7 @@
       <workItem from="1596479171505" duration="53369000" />
       <workItem from="1598119641453" duration="3942000" />
       <workItem from="1598124203514" duration="7291000" />
-      <workItem from="1598131917429" duration="22634000" />
+      <workItem from="1598131917429" duration="26445000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
