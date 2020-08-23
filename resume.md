@@ -1,6 +1,6 @@
 @def title = "Resume"
 
-## Experience
+~~~
 <h2 class="section-heading">Experience</h2>
         
         <h3 class="org-header">U.S. Department of Defense</h3>
@@ -80,3 +80,4 @@
         
         <h2 class="section-heading">Education</h2>
         <p>University of Maryland, College Park</p>
+~~~
