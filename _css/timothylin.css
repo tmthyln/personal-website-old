@@ -6,3 +6,25 @@
     border-style: solid;
     border-width: 1px;
 }
+
+/* Blog Posts Index Page */
+.post-card {
+    border-left: 5px solid navy;
+    border-right: 5px solid navy;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.post-card-title {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+.post-card-title a:link  {
+    text-decoration: none;
+}
+.post-card-title a:hover  {
+    color: dodgerblue;
+}

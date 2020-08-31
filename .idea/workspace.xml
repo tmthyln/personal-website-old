@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="" />
+    <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/posts/nojavascript.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_css/timothylin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/timothylin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/200620-shampoo.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/200620-shampoo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +57,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\tmthy\Documents\pers\portfolio\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
     <property name="vuejs.nuxt.types-notification-shown" value="true" />
   </component>
   <component name="RecentsManager">
@@ -173,7 +181,9 @@
       <workItem from="1596479171505" duration="53369000" />
       <workItem from="1598119641453" duration="3942000" />
       <workItem from="1598124203514" duration="7291000" />
-      <workItem from="1598131917429" duration="26806000" />
+      <workItem from="1598131917429" duration="28295000" />
+      <workItem from="1598243403263" duration="5221000" />
+      <workItem from="1598824770831" duration="4107000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
