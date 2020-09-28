@@ -1,4 +1,5 @@
 @def title = "Analysis of BogoSelectionSort"
+@def blogpost = true
 @def tags = ["umd", "math"]
 @def date = Date(2019, 11, 20)
 @def rss = ""

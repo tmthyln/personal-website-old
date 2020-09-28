@@ -9,6 +9,8 @@ The website_* must be defined for the RSS to work
 
 @def author = "Timothy Lin"
 
+@def blogpost = false
+
 @def mintoclevel = 2
 
 <!--

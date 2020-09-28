@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_css/timothylin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/timothylin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layout/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/page_foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/page_foot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.md" beforeDir="false" afterPath="$PROJECT_DIR$/config.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extras.md" beforeDir="false" afterPath="$PROJECT_DIR$/experiments.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/191120-bogosorting.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/191120-bogosorting.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/200620-shampoo.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/200620-shampoo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume.md" beforeDir="false" afterPath="$PROJECT_DIR$/projects.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +179,8 @@
       <workItem from="1598243403263" duration="5221000" />
       <workItem from="1598824770831" duration="5495000" />
       <workItem from="1598843546838" duration="24000" />
-      <workItem from="1598843587935" duration="12310000" />
+      <workItem from="1598843587935" duration="13709000" />
+      <workItem from="1601309226797" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
