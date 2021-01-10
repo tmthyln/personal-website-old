@@ -1,4 +1,4 @@
-@def title = "Personal Blog"
+@def title = "Personal Blog of Timothy Lin"
 
 \newcommand{\posthead}[2]{
     @@post-card-header
@@ -7,13 +7,7 @@
     @@
 }
 
-# Personal Blog
-
-@@post-card
-    \posthead{[Remote Voting for the Masses](/posts/)}{Oct, 2020}
-    
-    Some unsubstantiated ideas about things that might be valuable in order to do remote voting.
-@@
+# Peripatetic Speculations
 
 @@post-card
     \posthead{[A Shampoo Review](/posts/200620-shampoo/)}{Jun 20, 2020}

@@ -2,8 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/404.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_css/adjust.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_css/minimal-mistakes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layout/body_layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layout/masthead.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_libs/minimal-mistakes/main.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manifest.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Manifest.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/linkedin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/personal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_assets/rndimg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_css/franklin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/franklin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_css/poole_hyde.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_css/timothylin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/timothylin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/page_foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/page_foot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/sidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/style.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/style.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/tag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/highlight/github.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/highlight/github.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/highlight/highlight.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/highlight/highlight.pack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/auto-render.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/auto-render.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_AMS-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Caligraphic-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Fraktur-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-BoldItalic.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Italic.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Main-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-BoldItalic.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Math-Italic.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Italic.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_SansSerif-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Script-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size1-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size2-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size3-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Size4-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/fonts/KaTeX_Typewriter-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/katex.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/katex.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/katex/katex.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/katex/katex.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.md" beforeDir="false" afterPath="$PROJECT_DIR$/config.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,17 +144,19 @@
     <property name="vuejs.nuxt.types-notification-shown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/_libs" />
+      <recent name="$PROJECT_DIR$/_libs/highlight" />
+      <recent name="$PROJECT_DIR$/_layout" />
+      <recent name="$PROJECT_DIR$/_css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tmthy\Documents\pers\portfolio" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\posts" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\src" />
       <recent name="C:\Users\tmthy\Documents\pers\portfolio\pages\posts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\public" />
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_css" />
-      <recent name="C:\Users\tmthy\Documents\pers\portfolio\_assets" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -184,7 +275,7 @@
       <workItem from="1598843587935" duration="13709000" />
       <workItem from="1601309226797" duration="1396000" />
       <workItem from="1602450428591" duration="15395000" />
-      <workItem from="1610229946197" duration="1220000" />
+      <workItem from="1610229946197" duration="7133000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>

@@ -21,9 +21,6 @@ you might not want. Indicate directories by ending the name with a `/`.
 @def ignore = ["node_modules/", "franklin", "franklin.pub", ".github/", ".idea/", "public/"]
 
 <!--
-Add here global latex commands to use throughout your
-pages. It can be math commands but does not need to be.
-For instance:
-* \newcommand{\phrase}{This is a long phrase to copy.}
+Global latex commands
 -->
 \newcommand{\reason}[1]{\quad\text{#1}}
