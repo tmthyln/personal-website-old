@@ -1,8 +1,8 @@
 @def title = "Analysis of BogoSelectionSort"
 @def blogpost = true
-@def tags = ["umd", "math"]
+@def tags = ["umd", "math", "cs"]
 @def date = Date(2019, 11, 20)
-@def rss = ""
+@def rss = "An analysis of a bad (but not that bad) sorting algorithm."
 @def hascode = true
 
 # From BogoSelectionSort to infinity and beyond!
