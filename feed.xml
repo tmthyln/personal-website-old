@@ -6,6 +6,14 @@
   <link>https://timothylin.me/</link>
   <atom:link href="https://timothylin.me/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title><![CDATA[Turn Left at the Next Prime]]></title>
+    <link>https://timothylin.me/posts/210118-leftprime/</link>
+    <description><![CDATA[Inspired by a post from John Cook, what happens when 
+<br><a href="https://timothylin.me/posts/210118-leftprime/">Read more</a>]]></description>
+    <guid>https://timothylin.me/posts/210118-leftprime/</guid>
+    <pubDate>Mon, 18 Jan 2021 00:00:00 UT</pubDate>
+  </item>
+  <item>
     <title><![CDATA[A Defense and Attack of Julia]]></title>
     <link>https://timothylin.me/posts/julia/</link>
     <description><![CDATA[Recently, I was discussing a slow computational problem with some colleagues where they needed to use MATLAB to develop, but the solution was too slow to compute for any meaningfully sized inputs. When Julia was suggested, it was passed off as a meme, so I felt obligated to talk about why I choose to use Julia.
@@ -24,10 +32,18 @@
   <item>
     <title><![CDATA[Shampoo Review]]></title>
     <link>https://timothylin.me/posts/200620-shampoo/</link>
-    <description><![CDATA[A non-systematic review of various shampoos, soaps, and body washes collected through two decades of hotel visits. &#40;Not&#41; sponsored by miscellaneous hotel toiletry brands.
+    <description><![CDATA[A non-systematic review of various shampoos, soaps, and body washes collected through two decades of hotel visits. &#40;Not&#41; sponsored by miscellaneous hotel toiletry brands. Also not sponsored by Aveeno, Amazon, or Harry&#39;s.
 <br><a href="https://timothylin.me/posts/200620-shampoo/">Read more</a>]]></description>
     <guid>https://timothylin.me/posts/200620-shampoo/</guid>
     <pubDate>Sat, 20 Jun 2020 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title><![CDATA[Analysis of BogoSelectionSort]]></title>
+    <link>https://timothylin.me/posts/191120-bogosorting/</link>
+    <description><![CDATA[An analysis of a bad &#40;but not that bad&#41; sorting algorithm.
+<br><a href="https://timothylin.me/posts/191120-bogosorting/">Read more</a>]]></description>
+    <guid>https://timothylin.me/posts/191120-bogosorting/</guid>
+    <pubDate>Wed, 20 Nov 2019 00:00:00 UT</pubDate>
   </item>
 </channel>
 </rss>
