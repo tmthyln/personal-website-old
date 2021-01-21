@@ -8,7 +8,7 @@ Master's in CS at the University of Maryland.
 * teaching  *(currently CMSC132 @ UMD)*
   * a short, principled introduction to programming using java (based in part on the current curriculum and [this textbook](http://math.hws.edu/javanotes/))
   * an introduction to machine learning using julia (based on current CMSC422 curriculum @ UMD)
-* mastering [julia](julialang.org), including authoring a few julia packages:
+* mastering [julia](https://julialang.org/), including authoring a few julia packages:
   * [ARMANets.jl](https://github.com/tmthyln/ARMANets.jl)
   * [ZhuyinPinyin.jl](https://github.com/tmthyln/ZhuyinPinyin.jl),
     [CEDICT.jl](https://github.com/tmthyln/CEDICT.jl),

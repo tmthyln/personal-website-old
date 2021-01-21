@@ -3,7 +3,7 @@
 ================================================================== */
 
 :root {
-  --block-background: #f8f8f8;
+  --block-background: #ffffff;
   --small: 14px;
   --normal: 19px;
   --text-color: hsv(0, 0%, 20%);
@@ -17,6 +17,10 @@ html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: var(--normal);
   color: var(--text-color);
+}
+
+.franklin-content {
+  background-color: var(--block-background);
 }
 
 /* ==================================================================
@@ -80,7 +84,7 @@ html {
 
 .franklin-content {
   position: relative;
-  padding-left: 12.5%;
+  padding-left: 5%;
   padding-right: 12.5%;
   line-height: 1.35em;
 }

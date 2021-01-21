@@ -16,7 +16,7 @@
     "200620-shampoo/"}}
 
 {{ postcard 
-    "Survey of Bad Sorting"
+    "An Analysis of a Bad Sorting Algorithm"
     "An analysis of a bad (but not that bad) sorting algorithm."
     "Nov 20, 2019" 
     "191120-bogosorting/" }}
