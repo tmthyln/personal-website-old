@@ -37,9 +37,9 @@ jobs:
         using Franklin;
         optimize()'
     - name: Public Files
-      run: cp ./public/* ./__site/
+      run: cp -r ./public/* ./__site/
     - name: Keep Files for Deployment
-      run: cp ./.github/* ./__site/
+      run: cp -r ./.github/* ./__site/
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
