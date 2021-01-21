@@ -38,6 +38,8 @@ jobs:
         optimize()'
     - name: Public Files
       run: cp ./public/* ./__site/
+    - name: Keep Files for Deployment
+      run: cp ./.github/* ./__site/
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
