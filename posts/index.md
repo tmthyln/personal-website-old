@@ -1,10 +1,10 @@
 @def title = "Personal Blog of Timothy Lin"
 
-# Peripatetic Speculations
+# Weighty Biases
 
 {{ postcard
     "Turn Left at the Next Prime"
-    ""
+    "What happens when we traverse the grid of Gaussian integers by turning left whenever we hit a Gaussian prime? This is a Julia implementation of a simulation originally in Python (but was too slow for interactive exploration) of an idea originally brought up on Stack Overflow. Lots of interesting images."
     "Jan 18, 2021"
     "210118-leftprime/"
     "/assets/posts/210118-leftprime/cover.png"}}
