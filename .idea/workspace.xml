@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_layout/body_particles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layout/foot_particles.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_libs/particles/particles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_css/adjust.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/adjust.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_css/franklin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/franklin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_css/timothylin.css" beforeDir="false" afterPath="$PROJECT_DIR$/_css/timothylin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layout/body_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/body_layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layout/foot.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/foot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/things-to-know.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/things-to-know.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layout/foot_particles.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layout/foot_particles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_libs/particles/particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/_libs/particles/particles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +199,8 @@
       <workItem from="1610943113835" duration="2173000" />
       <workItem from="1610945425884" duration="12431000" />
       <workItem from="1611201797131" duration="430000" />
-      <workItem from="1611202251180" duration="6142000" />
+      <workItem from="1611202251180" duration="7209000" />
+      <workItem from="1611259839303" duration="563000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
