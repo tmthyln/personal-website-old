@@ -19,10 +19,6 @@ html {
   color: var(--text-color);
 }
 
-.franklin-content {
-  background-color: var(--block-background);
-}
-
 /* ==================================================================
     BASIC GRID FOR PROFILE PIC
 ================================================================== */
@@ -67,25 +63,44 @@ html {
   font-family: Arial, serif;
   color: #262220;
   text-align: center;
-  margin-top: 6em;
+  margin-top: 3em;
   border-top: 1px solid lightgrey;
   padding-top: 2em;
   margin-bottom: 4em;
 }
 
 /* ==================================================================
-    TEXT GEOMETRY
+    TABLE OF CONTENTS
 ================================================================== */
+
+#toc-container {
+
+}
+
+.franklin-toc {
+  margin-left: 0;
+}
 
 .franklin-toc li {
   /* Avoid clickable elements being too close together. */
-  margin: 0.6rem 0;
+  margin: 0.75rem 0;
+  font-size: 20px;
 }
 
+.franklin-toc a {
+  text-decoration: none;
+  font-size: inherit;
+}
+
+/* ==================================================================
+    TEXT GEOMETRY
+================================================================== */
+
 .franklin-content {
+  background-color: var(--block-background);
   position: relative;
-  padding-left: 5%;
-  padding-right: 12.5%;
+  padding-left: 2%;
+  padding-right: 2%;
   line-height: 1.35em;
 }
 

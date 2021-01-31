@@ -4,6 +4,8 @@
 @def date = Date(2019, 11, 20)
 @def rss = "An analysis of a bad (but not that bad) sorting algorithm."
 @def hascode = true
+@def sidetoc = true
+@def lang = "java"
 
 # From BogoSelectionSort to infinity and beyond!
 
