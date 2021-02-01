@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+    <list default="true" id="507a16c9-b34e-4d28-8857-fa11b927d815" name="Default Changelist" comment="convert to franklin">
+      <change beforePath="$PROJECT_DIR$/.idea/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_assets/posts/210118-leftprime/code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_libs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -63,10 +64,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_libs" />
       <recent name="$PROJECT_DIR$/_assets/posts/210118-leftprime/code" />
       <recent name="$PROJECT_DIR$/_assets" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/_libs" />
       <recent name="$PROJECT_DIR$/_libs/highlight" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -199,7 +200,8 @@
       <workItem from="1611201797131" duration="430000" />
       <workItem from="1611202251180" duration="7209000" />
       <workItem from="1611259839303" duration="6535000" />
-      <workItem from="1611267260008" duration="36000" />
+      <workItem from="1611267260008" duration="14526000" />
+      <workItem from="1612037807600" duration="7917000" />
     </task>
     <task id="LOCAL-00001" summary="make workspace clean">
       <created>1596433263251</created>
@@ -215,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598129360395</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="several quality of life and aesthetics improvements&#10;&#10;- sidetoc option to put table of contents in the persistent side panel&#10;- fixed icon for UMD CS website link, switch to square github icon for consistency&#10;- blog post card titles are links now&#10;- reduce density of particles in case of long pages&#10;&#10;- remove extraneous copied CSS&#10;- simplified blog post card interface">
+      <created>1612118961438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612118961438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -225,12 +234,14 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/dist" />
     </ignored-roots>
     <MESSAGE value="make workspace clean" />
     <MESSAGE value="convert to franklin" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert to franklin" />
+    <MESSAGE value="several quality of life and aesthetics improvements&#10;&#10;- sidetoc option to put table of contents in the persistent side panel&#10;- fixed icon for UMD CS website link, switch to square github icon for consistency&#10;- blog post card titles are links now&#10;- reduce density of particles in case of long pages&#10;&#10;- remove extraneous copied CSS&#10;- simplified blog post card interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="several quality of life and aesthetics improvements&#10;&#10;- sidetoc option to put table of contents in the persistent side panel&#10;- fixed icon for UMD CS website link, switch to square github icon for consistency&#10;- blog post card titles are links now&#10;- reduce density of particles in case of long pages&#10;&#10;- remove extraneous copied CSS&#10;- simplified blog post card interface" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
