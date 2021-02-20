@@ -21,6 +21,20 @@ function hfun_postcard(params)
     """
 end
 
+function hfun_timerange(params)
+    start = params[1]
+    ending = params[2]
+    title = params[3]
+    description = length(params) ≥ 4 ? params[4] : ""
+
+    """
+    <div>
+      <div class="title">$title</div>
+      <div class="info">$description</div>
+    </div><span class="number"><span>$ending</span><span>$start</span></span>
+    """
+end
+
 function hfun_bar(vname)
   val = Meta.parse(vname[1])
   return round(sqrt(val), digits=2)

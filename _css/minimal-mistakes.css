@@ -2524,13 +2524,12 @@ th {
 
 .page__footer {
   clear: both;
-  float: left;
+  float: bottom;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
-  clear: both;
   position: absolute;
-  bottom: 0;
+  bottom: -20%;
   height: auto;
   margin-top: 3em;
   color: #898c8f;

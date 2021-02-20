@@ -1,6 +1,6 @@
-@def title = "Personal Blog of Timothy Lin"
+@def title = "Fragments of Lint Blog"
 
-# Weighty Biases
+# Fragments of Lint
 
 {{ postcard
     "/posts/210118-leftprime"
