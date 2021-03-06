@@ -1,10 +1,10 @@
 .timeline ul {
-    margin: 50px 0 0 30px;
+    margin: 50px -50px 0 -30px;
     list-style: none;
     position: relative;
     padding: 1px 100px;
     color: #000;
-    font-size: 13px;
+    font-size: 14px;
 }
 .timeline ul:before {
     content: "";
@@ -66,7 +66,7 @@
 }
 .timeline span.number span {
     position: absolute;
-    font-size: 10px;
+    font-size: 12px;
     right: 15px;
     left: -80px;
     font-weight: bold;

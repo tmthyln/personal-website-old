@@ -19,6 +19,10 @@ html {
   color: var(--text-color);
 }
 
+.initial-content, #particles {
+  padding-bottom: -5em;
+}
+
 /* ==================================================================
     BASIC GRID FOR PROFILE PIC
 ================================================================== */
@@ -79,6 +83,7 @@ html {
 
 .franklin-toc {
   margin-left: 0;
+  font-size: 14pt;
 }
 
 .franklin-toc li {
