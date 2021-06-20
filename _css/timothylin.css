@@ -1,4 +1,7 @@
-/* headers, footers, sidebars, etc. */
+
+/* ==================================================================
+    PLACES ICONS
+================================================================== */
 .social-media-icon {
     width: 32px;
     height: 32px;
@@ -7,11 +10,33 @@
     border-width: 1px;
 }
 
-.figure {
-    float: right;
+.fa-linkedin {
+    color: #0072b1;
 }
 
-/* Animated background */
+.fa-university {
+    color: #e03a3d;
+}
+
+/* ==================================================================
+    BLOG POSTS LISTING
+================================================================== */
+.post-card h2 {
+    border: none;
+    margin: 0;
+}
+
+.post-card small.posted-date {
+    font-style: italic;
+}
+
+.post-card img {
+    object-fit: cover !important;
+}
+
+/* ==================================================================
+    BACKGROUND ANIMATION
+================================================================== */
 canvas {
     display: block;
     vertical-align: bottom;
@@ -26,7 +51,9 @@ canvas {
 }
 
 
-/* making things unselectable for aesthetics */
+/* ==================================================================
+    MISCELLANEOUS UTILITIES
+================================================================== */
 .unselectable {
     -moz-user-select: none;
     -khtml-user-select: none;

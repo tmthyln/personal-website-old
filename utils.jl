@@ -3,7 +3,7 @@ using Dates
 function hfun_postcard(params)
     page_rpath = strip(params[1], ['/'])
     title = pagevar(page_rpath, "title")
-    description = pagevar(page_rpath, "rss")
+    description = pagevar(page_rpath, "desc")
     println(pagevar(page_rpath, "rss"))
     date = pagevar(page_rpath, "date")
     formatted_date = "$(dayname(date)), $(monthabbr(date)) $(day(date)), $(year(date))"
@@ -11,12 +11,12 @@ function hfun_postcard(params)
     image = length(params) ≥ 2 ? """<img class="card-img-top" src="$(params[2])" />""" : ""#"<div class="card-img-top" style="background-color: blue"></div>"""
 
     """
-    <div class="card bg-dark text-white border-light mb-4">
+    <div class="post-card card bg-dark text-white border-light mb-4">
         $(image)
         <div class="card-body">
             <a href="$(link)"><h2 class="card-title">$(title)</h2></a>
-            <small class="card-text">$(formatted_date)</small>
-            <p class="card-text">$(description) &nbsp;&nbsp;<a href="$(link)" class="read-more">Read More</a></p>
+            <small class="posted-date card-text">$(formatted_date)</small>
+            <p class="card-text mt-3">$(description) &nbsp;&nbsp;<a href="$(link)" class="read-more">Read More</a></p>
         </div>
     </div>
     """

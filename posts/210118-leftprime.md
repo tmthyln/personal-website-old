@@ -3,6 +3,7 @@
 @def tags = ["julia", "math", "cs"]
 @def date = Date(2021, 1, 18)
 @def rss = "What happens when we traverse the grid of Gaussian integers by turning left whenever we hit a Gaussian prime? This is a Julia implementation of a simulation originally in Python (but was too slow for interactive exploration) of an idea originally brought up on Stack Overflow. Lots of interesting images."
+@def desc = "What happens when we traverse the grid of Gaussian integers by turning left whenever we hit a Gaussian prime? This is a Julia implementation of a simulation originally in Python (but was too slow for interactive exploration) of an idea originally brought up on Stack Overflow. Lots of interesting images."
 @def sidetoc = true
 
 \toc
