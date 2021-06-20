@@ -16,11 +16,3 @@ Master's in CS part-time at the University of Maryland.
     [IDSGraphs.jl](https://github.com/tmthyln/IDSGraphs.jl)
   * [MinesweeperSolvers.jl](https://github.com/tmthyln/MinesweeperSolvers.jl)
 
-@@timeline
-* {{ timerange "Aug 2020" "present" 
-  "M.S. in Computer Science" 
-  "University of Maryland, Department of Computer Science" }}
-* {{ timerange "Aug 2017" "May 2020"
-  "B.S. in Computer Science"
-  "University of Maryland, College Park" }}
-@@

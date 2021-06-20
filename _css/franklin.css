@@ -3,10 +3,8 @@
 ================================================================== */
 
 :root {
-  --block-background: #ffffff;
   --small: 14px;
   --normal: 19px;
-  --text-color: hsv(0, 0%, 20%);
 }
 
 /* ==================================================================
@@ -16,7 +14,6 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: var(--normal);
-  color: var(--text-color);
 }
 
 .initial-content, #particles {
@@ -102,7 +99,6 @@ html {
 ================================================================== */
 
 .franklin-content {
-  background-color: var(--block-background);
   position: relative;
   padding-left: 2%;
   padding-right: 2%;
@@ -185,7 +181,6 @@ td {
 }
 
 .franklin-content blockquote {
-  background: var(--block-background);
   border-left: 7px solid #a8a8a8;
   margin: 1.5em 10px;
   padding: 0.5em 10px;

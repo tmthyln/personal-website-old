@@ -3,7 +3,7 @@
 # Fragments of Lint
 
 {{ postcard
-    "/posts/210118-leftprime"
+    "/posts/210118-leftprime/"
     "/assets/posts/210118-leftprime/cover.png"}}
 
 {{ postcard

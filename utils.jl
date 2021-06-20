@@ -4,18 +4,19 @@ function hfun_postcard(params)
     page_rpath = strip(params[1], ['/'])
     title = pagevar(page_rpath, "title")
     description = pagevar(page_rpath, "rss")
+    println(pagevar(page_rpath, "rss"))
     date = pagevar(page_rpath, "date")
     formatted_date = "$(dayname(date)), $(monthabbr(date)) $(day(date)), $(year(date))"
     link = params[1]
-    image = length(params) ≥ 2 ? """<img class="blog-img" src="$(params[2])" />""" : ""#"<div class="blog-img" style="background-color: blue"></div>"""
+    image = length(params) ≥ 2 ? """<img class="card-img-top" src="$(params[2])" />""" : ""#"<div class="card-img-top" style="background-color: blue"></div>"""
 
     """
-    <div class="blog-card">
+    <div class="card bg-dark text-white border-light mb-4">
         $(image)
-        <div class="text-overlay">
-            <a href="$(link)"><h2>$(title)</h2></a>
-            $(formatted_date)
-            <p>$(description) &nbsp;&nbsp;<a href="$(link)" class="read-more">Read More</a></p>
+        <div class="card-body">
+            <a href="$(link)"><h2 class="card-title">$(title)</h2></a>
+            <small class="card-text">$(formatted_date)</small>
+            <p class="card-text">$(description) &nbsp;&nbsp;<a href="$(link)" class="read-more">Read More</a></p>
         </div>
     </div>
     """

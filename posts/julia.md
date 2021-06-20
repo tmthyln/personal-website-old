@@ -13,3 +13,5 @@ As a result, the phrase "_____ is not supported in this library" is less often h
 Community
 Of course, there are amazing people in the Julia community, but the language community also has its share of problems. When 
 
+# cons
+discovery
