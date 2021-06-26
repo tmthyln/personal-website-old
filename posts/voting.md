@@ -4,6 +4,8 @@
 @def date = Date(2020, 10, 12)
 @def rss = "Some unsubstantiated ideas about things that might be valuable in order to do remote voting."
 
+@def sitemap_exclude = false
+
 # Remote Voting for the Masses
 Given how many people will be (and already have) voted in this election cycle by mail, it's interesting to think about what if we had a "perfect" voting system. Here's what I mean by that:
 

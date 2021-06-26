@@ -8,9 +8,9 @@ The website_* must be defined for the RSS to work
 @def website_url   = "https://timothylin.me"
 
 @def author = "Timothy Lin"
+@def generate_rss = true
 
 @def blogpost = false
-@def sidetoc = false
 
 @def mintoclevel = 2
 

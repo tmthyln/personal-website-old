@@ -3,11 +3,10 @@
 # Fragments of Lint
 
 {{ postcard
-    "/posts/210118-leftprime/"
-    "/assets/posts/210118-leftprime/cover.png"}}
+    "/posts/210118-leftprime/" }}
 
 {{ postcard
-    "/posts/200620-shampoo"}}
+    "/posts/200620-shampoo" }}
 
 {{ postcard
     "/posts/191120-bogosorting" }}

@@ -1,6 +1,7 @@
 @def title = "Timothy Lin"
 
-Hey there! I'm a full-time computer scientist getting my 
+# Hey there! 
+I'm a full-time computer scientist getting my 
 Master's in CS part-time at the University of Maryland.
 
 ## What I'm Currently Working On

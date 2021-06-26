@@ -1,4 +1,7 @@
 @def title = "Reasons to Not Use Javascript"
+
+@def sitemap_exclude = false
+
 # {{ fill title }}
 
 ```javascript
