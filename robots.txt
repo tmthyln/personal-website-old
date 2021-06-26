@@ -1,1 +1,4 @@
 Sitemap: https://timothylin.me/sitemap.xml
+
+User-agent: *
+Disallow:

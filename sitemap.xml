@@ -1,28 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://timothylin.me/</loc>
-        <lastmod>2021-06-20</lastmod>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>https://timothylin.me/posts/</loc>
-        <lastmod>2021-06-20</lastmod>
-        <changefreq>weekly</changefreq>
-    </url>
-    <url>
-        <loc>https://timothylin.me/posts/200620-shampoo/</loc>
-        <lastmod>2021-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://timothylin.me/posts/191120-bogosorting/</loc>
-        <lastmod>2021-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://timothylin.me/posts/210118-leftprime/</loc>
-        <lastmod>2021-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-    </url>
+
+<url>
+    <loc>https://timothylin.me/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/191120-bogosorting/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/things-to-know/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/index.html</loc>
+    <lastmod>0001-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/404/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/210622-ta-np-complete/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/julia/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/210118-leftprime/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/nojavascript/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/voting/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://timothylin.me/posts/200620-shampoo/index.html</loc>
+    <lastmod>2021-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
 </urlset>
