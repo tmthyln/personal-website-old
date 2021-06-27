@@ -1,3 +1,4 @@
+
 /* ==================================================================
     VARIABLES
 ================================================================== */
@@ -284,8 +285,14 @@ code {
   font-size: small;
 }
 
+pre {
+  padding: 1em;
+  border-radius: 1em;
+}
+
 .franklin-content code, .franklin-content .hljs, pre {
   font-size: medium;
+  background-color: #333;
 }
 
 .hljs {
