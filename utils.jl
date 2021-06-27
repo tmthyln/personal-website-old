@@ -1,7 +1,14 @@
 using Dates
 
 function tag_badge(tag_name)
-    """<span class="blog-tag badge rounded-pill bg-light text-dark">$(tag_name)</span>"""
+    tag_link = "/tag/$(tag_name)"
+
+    """
+    <a href="$(tag_link)">
+      <span class="blog-tag badge rounded-pill bg-light text-dark">
+        $(tag_name)
+      </span>
+    </a>"""
 end
 
 function hfun_postcard(params)
