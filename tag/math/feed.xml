@@ -23,25 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  TA Office Hours is an NP-Complete Problem  ]]>
-  </title>
-  <link> https://timothylin.me/posts/210622-ta-np-complete/index.html </link>
-  <guid> https://timothylin.me/posts/210622-ta-np-complete/index.html </guid>
-  <description>
-    <![CDATA[  What happens when we traverse the grid of Gaussian integers by turning left whenever we hit a Gaussian prime? This is a Julia implementation of a simulation originally in Python &#40;but was too slow for interactive exploration&#41; of an idea originally brought up on Stack Overflow. Lots of interesting images.  ]]>
-  </description>  
-    
-  <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Timothy Lin</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Turn Left at the Next Prime  ]]>
   </title>
   <link> https://timothylin.me/posts/210118-leftprime/index.html </link>

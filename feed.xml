@@ -23,25 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  TA Office Hours is an NP-Complete Problem  ]]>
-  </title>
-  <link> https://timothylin.me/posts/210622-ta-np-complete/index.html </link>
-  <guid> https://timothylin.me/posts/210622-ta-np-complete/index.html </guid>
-  <description>
-    <![CDATA[  What happens when we traverse the grid of Gaussian integers by turning left whenever we hit a Gaussian prime? This is a Julia implementation of a simulation originally in Python &#40;but was too slow for interactive exploration&#41; of an idea originally brought up on Stack Overflow. Lots of interesting images.  ]]>
-  </description>  
-    
-  <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Timothy Lin</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Turn Left at the Next Prime  ]]>
   </title>
   <link> https://timothylin.me/posts/210118-leftprime/index.html </link>
@@ -51,44 +32,6 @@
   </description>  
     
   <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Timothy Lin</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  A Defense and Attack of Julia  ]]>
-  </title>
-  <link> https://timothylin.me/posts/julia/index.html </link>
-  <guid> https://timothylin.me/posts/julia/index.html </guid>
-  <description>
-    <![CDATA[  Recently, I was discussing a slow computational problem with some colleagues where they needed to use MATLAB to develop, but the solution was too slow to compute for any meaningfully sized inputs. When Julia was suggested, it was passed off as a meme, so I felt obligated to talk about why I choose to use Julia.  ]]>
-  </description>  
-    
-  <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Timothy Lin</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Remote Voting for the Masses  ]]>
-  </title>
-  <link> https://timothylin.me/posts/voting/index.html </link>
-  <guid> https://timothylin.me/posts/voting/index.html </guid>
-  <description>
-    <![CDATA[  Some unsubstantiated ideas about things that might be valuable in order to do remote voting.  ]]>
-  </description>  
-    
-  <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
