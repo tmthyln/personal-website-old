@@ -1,4 +1,4 @@
-@def title="Useful Things to Know that are Easy to Know"
+@def title="Useful Things to Know that Are Easy to Know But Are Often Unknown"
 
 @def sitemap_exclude = false
 
