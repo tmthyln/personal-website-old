@@ -6,3 +6,5 @@ vcs
 
 ssh
 
+markdown (or equivalent markup)
+
