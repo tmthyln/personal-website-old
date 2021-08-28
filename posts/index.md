@@ -6,8 +6,5 @@
     "/posts/210118-leftprime/" }}
 
 {{ postcard
-    "/posts/200620-shampoo" }}
-
-{{ postcard
     "/posts/191120-bogosorting" }}
 
