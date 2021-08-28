@@ -65,7 +65,7 @@ end
 To support the interactivity, I also have some other related functions, see the attached 
 notebook.
 
-(To be fair, the code above doesn't actually do the same thing as the original code in a 
+(To be fair, the code above doesn't quite do the same thing as the original code in a 
 couple of ways, but it should still be straightforward to understand. There is also a huge 
 speed improvement, to the point that this can be done interactively.)
 
